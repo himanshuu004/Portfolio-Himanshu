@@ -10,6 +10,7 @@ const BeyondCoding = ({ theme }) => {
       id: 1,
       title: 'Tech Contributor',
       description: 'Contributing to open-source projects and sharing technical knowledge through talks, articles, and mentorship.',
+      thumbnail: '/assets/beyond-coding/thumb-contributor.jpg',
       video: '/assets/beyond-coding/tech-contributor.mp4',
       hideSocialLinks: true,
       otherLinks: [
