@@ -13,30 +13,21 @@ const Projects = ({ theme }) => {
       githubLink: '#',
     },
     {
-      id: 2,
-      name: 'Clothify',
-      description: 'A fashionable e-commerce website with dynamic product catalogs and seamless shopping experience.',
-      skills: ['React.JS', 'GSAP', 'JavaScript', 'CSS'],
-      video: '/assets/projects pic/3.mp4',
-      liveLink: 'https://ishtyle.netlify.app/',
-      githubLink: '#',
-    },
-    {
-      id: 3,
-      name: 'Cotton Craze',
-      description: 'An elegant textile and clothing showcase website featuring interactive galleries and modern design.',
-      skills: ['React','JavaScript', 'CSS'],
-      video: '/assets/projects pic/1.mp4',
-      liveLink: 'https://cottoncraze.netlify.app/',
-      githubLink: '#',
-    },
-    {
       id: 4,
       name: 'Page Algorithm Simulator',
       description: 'A comprehensive page replacement algorithm simulator implementing FIFO, LRU, and Optimal algorithms with interactive visualizations and performance comparisons.',
       skills: ['React', 'JavaScript', 'Algorithm Visualization', 'CSS'],
       image: '/assets/projects pic/Page Algorithm Simulator.png',
       liveLink: 'https://simulator-tawny.vercel.app/',
+      githubLink: '#',
+    },
+    {
+      id: 2,
+      name: 'Clothify',
+      description: 'A fashionable e-commerce website with dynamic product catalogs and seamless shopping experience.',
+      skills: ['React.JS', 'GSAP', 'JavaScript', 'CSS'],
+      video: '/assets/projects pic/3.mp4',
+      liveLink: 'https://ishtyle.netlify.app/',
       githubLink: '#',
     },
     {
@@ -56,7 +47,18 @@ const Projects = ({ theme }) => {
       video: '/assets/projects pic/autism.mov', // Using existing image as placeholder
       liveLink: 'https://autism-awareness-portal.vercel.app/',
       githubLink: '#',
-    }
+    },
+    {
+      id: 3,
+      name: 'Cotton Craze',
+      description: 'An elegant textile and clothing showcase website featuring interactive galleries and modern design.',
+      skills: ['React','JavaScript', 'CSS'],
+      video: '/assets/projects pic/1.mp4',
+      liveLink: 'https://cottoncraze.netlify.app/',
+      githubLink: '#',
+    },
+    
+    
   ]
 
   return (
