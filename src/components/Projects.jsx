@@ -14,7 +14,7 @@ const Projects = ({ theme }) => {
     },
     {
       id: 2,
-      name: 'Ishtyle',
+      name: 'Clothify',
       description: 'A fashionable e-commerce website with dynamic product catalogs and seamless shopping experience.',
       skills: ['React', 'Animation', 'JavaScript', 'CSS'],
       video: '/assets/projects pic/3.mp4',
@@ -30,6 +30,33 @@ const Projects = ({ theme }) => {
       liveLink: 'https://cottoncraze.netlify.app/',
       githubLink: '#',
     },
+    {
+      id: 4,
+      name: 'Page Algorithm Simulator',
+      description: 'A comprehensive page replacement algorithm simulator implementing FIFO, LRU, and Optimal algorithms with interactive visualizations and performance comparisons.',
+      skills: ['React', 'JavaScript', 'Algorithm Visualization', 'CSS'],
+      image: '/assets/projects pic/Page Algorithm Simulator.png',
+      liveLink: 'https://simulator-tawny.vercel.app/',
+      githubLink: '#',
+    },
+    {
+      id: 5,
+      name: 'Smart Rental Web-App',
+      description: 'An intelligent property rental platform featuring advanced search filters, real-time availability tracking, and seamless booking management for landlords and tenants.',
+      skills: ['React', 'Node.js', 'MongoDB', 'CSS'],
+      image: '/assets/projects pic/Smart Rental Web-App.png',
+      liveLink: 'https://smart-rental-app.vercel.app/',
+      githubLink: '#',
+    },
+    {
+      id: 6,
+      name: 'Autism and Speech Therapy Sessions Portal',
+      description: 'A comprehensive digital platform designed to support autism therapy and speech development sessions. Features interactive learning modules, progress tracking, and personalized therapy plans for children with autism spectrum disorders.',
+      skills: ['React', 'Node.js', 'MongoDB', 'Therapy Management'],
+      video: '/assets/projects pic/autism.mov', // Using existing image as placeholder
+      liveLink: 'https://autism-awareness-portal.vercel.app/',
+      githubLink: '#',
+    }
   ]
 
   return (
@@ -64,14 +91,22 @@ const Projects = ({ theme }) => {
             >
               {/* Video/Image */}
               <div className="h-64 overflow-hidden">
-                <video
-                  src={project.video}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover"
+                  />
+                )}
               </div>
               
               {/* Project Info */}
