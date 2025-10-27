@@ -42,7 +42,7 @@ const Projects = ({ theme }) => {
     {
       id: 5,
       name: 'Smart Rental Web-App',
-      description: 'An intelligent property rental platform featuring advanced search filters, real-time availability tracking, and seamless booking management for landlords and tenants.',
+      description: 'Smart Rental Web-App — A React.js and Tailwind-based platform for renting bikes and scooties on an hourly basis. Users pay only for the time they use, with real-time availability and easy booking.',
       skills: ['React', 'Node.js', 'MongoDB', 'CSS'],
       image: '/assets/projects pic/Smart Rental Web-App.png',
       liveLink: 'https://smart-rental-app.vercel.app/',
