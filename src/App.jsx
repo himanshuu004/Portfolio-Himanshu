@@ -16,38 +16,10 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Check for saved theme preference or default to system
-    const savedTheme = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    
-    if (savedTheme) {
-      if (savedTheme === 'system') {
-        const systemTheme = prefersDark ? 'dark' : 'light'
-        setTheme(systemTheme)
-      } else {
-        setTheme(savedTheme)
-      }
-    } else {
-      // Use system preference
-      const systemTheme = prefersDark ? 'dark' : 'light'
-      setTheme(systemTheme)
-    }
-  }, [])
-
-  // Handle system theme changes
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    const savedTheme = localStorage.getItem('theme')
-    
-    if (savedTheme === 'system') {
-      const handleChange = () => {
-        const systemTheme = mediaQuery.matches ? 'dark' : 'light'
-        setTheme(systemTheme)
-      }
-      
-      mediaQuery.addEventListener('change', handleChange)
-      return () => mediaQuery.removeEventListener('change', handleChange)
-    }
+    // Always start with light theme on initial load
+    // Theme preference will be applied after user interaction
+    setTheme('light')
+    localStorage.setItem('theme', 'light')
   }, [])
 
   useEffect(() => {
@@ -66,14 +38,7 @@ function App() {
 
   const toggleTheme = (newTheme) => {
     localStorage.setItem('theme', newTheme)
-    
-    if (newTheme === 'system') {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-      const systemTheme = prefersDark ? 'dark' : 'light'
-      setTheme(systemTheme)
-    } else {
-      setTheme(newTheme)
-    }
+    setTheme(newTheme)
   }
 
   if (loading) {

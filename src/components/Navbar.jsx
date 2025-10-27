@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaSun, FaMoon, FaDesktop } from 'react-icons/fa'
+import { FaSun, FaMoon } from 'react-icons/fa'
 import { HiMenu, HiX } from 'react-icons/hi'
 
 const Navbar = ({ theme, toggleTheme }) => {
@@ -43,23 +43,20 @@ const Navbar = ({ theme, toggleTheme }) => {
   }, [navLinks])
 
   const handleThemeChange = () => {
-    const currentTheme = localStorage.getItem('theme') || 'system'
+    const currentTheme = localStorage.getItem('theme') || 'light'
     
     if (currentTheme === 'light') {
       toggleTheme('dark')
-    } else if (currentTheme === 'dark') {
-      toggleTheme('system')
     } else {
       toggleTheme('light')
     }
   }
 
   const getThemeIcon = () => {
-    const currentTheme = localStorage.getItem('theme') || 'system'
+    const currentTheme = localStorage.getItem('theme') || 'light'
     
     if (currentTheme === 'light') return <FaSun className="text-2xl" />
-    if (currentTheme === 'dark') return <FaMoon className="text-2xl" />
-    return <FaDesktop className="text-2xl" />
+    return <FaMoon className="text-2xl" />
   }
 
   return (
